@@ -12,5 +12,13 @@ services:
     ports:
       - "5432:5432/tcp"
 
+  app:
+    image: fuzuligulmammadli/coding-task-lxsft:v1
+    restart: always
+    ports:
+      - "8081:8080/tcp"
+    environment:
+      DB_HOST: "db"
+
 volumes:
   db_data:
